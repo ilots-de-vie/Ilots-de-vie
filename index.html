@@ -1,46 +1,150 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Îlots de Vie</title>
 
 <style>
 
-body{
+:root{
+    --vert-ilots:#2E5B2D;
+    --vert-roseliere:#4F7D3A;
+    --bleu-eau:#2B5DAA;
+    --orange-rougegorge:#C8642C;
+    --beige:#F5F1E8;
+}
+
+*{
     margin:0;
-    font-family:Arial,sans-serif;
-    line-height:1.6;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", sans-serif;
+    background:var(--beige);
     color:#333;
+    line-height:1.7;
 }
 
 header{
-    background:#2c6e49;
+    background:
+        linear-gradient(rgba(46,91,45,0.85),
+        rgba(46,91,45,0.85));
     color:white;
     text-align:center;
     padding:80px 20px;
 }
 
+.logo{
+    width:140px;
+    margin-bottom:20px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.signature{
+    color:#EAEAEA;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+nav{
+    background:white;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+nav a{
+    color:var(--vert-ilots);
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:600;
+}
+
 section{
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
-    padding:50px 20px;
+    padding:70px 20px;
 }
 
 h2{
-    color:#2c6e49;
+    color:var(--vert-ilots);
+    margin-bottom:25px;
+    font-size:2rem;
 }
 
-.mission{
-    background:#f5f8f6;
+.hero{
+    text-align:center;
+}
+
+.hero p{
+    font-size:1.2rem;
+    max-width:850px;
+    margin:auto;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:var(--bleu-eau);
+    margin-bottom:15px;
+}
+
+.vision{
+    background:white;
+}
+
+.cta{
+    background:var(--vert-ilots);
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    color:white;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:var(--orange-rougegorge);
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:40px;
+    font-weight:bold;
 }
 
 footer{
-    background:#2c6e49;
+    background:#1f3f1e;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:35px;
+}
+
+.small{
+    opacity:.8;
+    margin-top:10px;
 }
 
 </style>
@@ -49,44 +153,108 @@ footer{
 <body>
 
 <header>
+
+    <!-- Remplacer par le vrai logo -->
+    <img src="images/logo-ilots-de-vie.png"
+         alt="Logo Îlots de Vie"
+         class="logo">
+
     <h1>Îlots de Vie</h1>
-    <p>
-        Restaurer l'eau, l'air et la biodiversité de l'estuaire de la Gironde
+
+    <p class="signature">
+        ASSAINIR • RENATURER • PROTÉGER
     </p>
+
 </header>
 
-<section>
-    <h2>Notre vision</h2>
+<nav>
+    <a href="#mission">Mission</a>
+    <a href="#actions">Actions</a>
+    <a href="#territoire">Territoire</a>
+    <a href="#soutenir">Soutenir</a>
+</nav>
+
+<section class="hero" id="mission">
+
+    <h2>La nature au service de l'eau, de l'air et des territoires</h2>
 
     <p>
-        L'association Îlots de Vie développe des solutions écologiques
-        inspirées du vivant pour améliorer durablement la qualité de l'eau,
-        de l'air et des habitats naturels.
+        L'association Îlots de Vie développe des solutions fondées sur le vivant
+        afin d'améliorer durablement la qualité de l'eau, de l'air et des
+        écosystèmes de l'estuaire de la Gironde.
     </p>
+
 </section>
 
-<section class="mission">
+<section id="actions">
+
     <h2>Nos actions</h2>
 
-    <ul>
-        <li>Jardins flottants filtrants</li>
-        <li>Réseaux racinaires dépolluants</li>
-        <li>Forêts comestibles</li>
-        <li>Protection de la biodiversité locale</li>
-        <li>Sensibilisation et participation citoyenne</li>
-    </ul>
+    <div class="cards">
+
+        <div class="card">
+            <h3>🌿 Jardins flottants</h3>
+            <p>
+                Création d'îlots végétalisés favorisant l'épuration naturelle
+                des eaux et le retour de la biodiversité.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💧 Réseaux racinaires</h3>
+            <p>
+                Développement de systèmes biologiques filtrants inspirés des
+                zones humides naturelles.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌳 Forêts comestibles</h3>
+            <p>
+                Plantation d'écosystèmes nourriciers favorables aux pollinisateurs,
+                oiseaux et espèces locales.
+            </p>
+        </div>
+
+    </div>
+
 </section>
 
-<section>
-    <h2>Territoire d'action</h2>
+<section class="vision" id="territoire">
+
+    <h2>Territoire d'intervention</h2>
 
     <p>
-        Entre Bourg-sur-Gironde et Blaye, au cœur de l'estuaire de la Gironde.
+        Les actions de l'association se concentrent principalement sur
+        l'estuaire de la Gironde, entre Bourg-sur-Gironde et Blaye,
+        avec l'objectif de créer un réseau d'initiatives locales au service
+        de la qualité de l'eau, de l'air et de la biodiversité.
     </p>
+
+</section>
+
+<section class="cta" id="soutenir">
+
+    <h2>Rejoindre l'aventure</h2>
+
+    <p>
+        Vous souhaitez devenir bénévole, partenaire ou soutenir nos projets ?
+    </p>
+
+    <a class="btn" href="mailto:contact@ilots-de-vie.org">
+        Nous contacter
+    </a>
+
 </section>
 
 <footer>
-    © Îlots de Vie
+
+    <strong>Association Îlots de Vie</strong>
+
+    <div class="small">
+        Restaurer l'eau, l'air et la biodiversité de l'estuaire de la Gironde.
+    </div>
+
 </footer>
 
 </body>
